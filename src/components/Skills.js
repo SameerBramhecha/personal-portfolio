@@ -4,6 +4,12 @@ import 'react-multi-carousel/lib/styles.css';
 import backImg from "../assets/img/footer-bg.png"
 import colorSharp from "../assets/img/color-sharp.png"
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import azurelogo from "../assets/img/azure-icon.svg";
+import docker from "../assets/img/docker.svg";
+import k8s from "../assets/img/k8s.svg";
+import node from "../assets/img/node.svg";
+import react from "../assets/img/react.svg";
+import dotnet from "../assets/img/dotnet.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -39,6 +45,37 @@ export const Skills = () => {
                   <img src="https://cdn-icons-png.flaticon.com/128/226/226777.png" alt="Java" />
                   <h5>Java</h5>
                 </div>
+
+                <div className="item">
+                <img src={azurelogo} alt="Azure" />
+                  <h5>Azure</h5>
+                </div>
+
+                <div className="item">
+                  <img src={dotnet} alt=".NET" />
+                  <h5>.NET</h5>
+                </div>
+
+                <div className="item">
+                  <img src={docker} alt="Docker" />
+                  <h5>Docker</h5>
+                </div>
+
+                <div className="item">
+                  <img src={k8s} alt="Kubernetes" />
+                  <h5>Kubernetes</h5>
+                </div>
+
+                <div className="item">
+                  <img src={react} alt="ReactJs" />
+                  <h5>React JS</h5>
+                </div>
+
+                <div className="item">
+                  <img src={node} alt="NodeJs" />
+                  <h5>Node JS</h5>
+                </div>
+
                 <div className="item">
                   <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" alt="C++" />
                   <h5>C++</h5>

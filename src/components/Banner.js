@@ -58,7 +58,9 @@ export const Banner = () => {
                   <h1>{`Sameer Bramhecha`}
                     <br></br>
                     <span className="txt-rotate" dataPeriod="80" data-rotate='["Developer", "Freelancer"]'>I am a <span className="wrap">{text}</span></span></h1>
-                  <p>I'm a Fourth Year student currently pursuing a Bachelor's Degree in Computer Engineering at the Pune Institute of Computer Technology. I'm an open minded person and love to connect & interact with people. I’m currently exploring Blockchain Technology. I'm really intrested in DSA, Competitive Programming and Cyber Security. Apart from my studies, I love playing cricket, watching movies, playing piano & listening to music.</p>
+                  <p>I have completed my Bachelor's Degree in Computer Engineering from Pune Institute of Computer Technology. I am an open-minded individual who enjoys connecting and interacting with people. Currently, I am working as a Trainee at a US-based company, specializing in the Cloud Adoption domain. I am also exploring DevOps practices and various development frameworks to strengthen my skills. My areas of interest include Data Structures and Algorithms (DSA), Competitive Programming, and Cyber Security. Outside of work, I enjoy playing cricket, watching movies, playing the piano, and listening to music.
+
+</p>
                   {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
                 </div>}
             </TrackVisibility>
