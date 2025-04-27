@@ -9,10 +9,12 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Developer", "Freelancer"];
+  // const toRotate = ["Developer", "Freelancer"];
   const period = 2000;
 
   useEffect(() => {
+
+    const toRotate = ["Developer", "Designer", "Creator"];
     const tick = () => {
       const i = loopNum % toRotate.length;
       const fullText = toRotate[i];
@@ -39,7 +41,7 @@ export const Banner = () => {
     const ticker = setInterval(tick, delta);
 
     return () => clearInterval(ticker);
-  }, [text, isDeleting, delta, loopNum, toRotate]); // ✅ Fixed missing toRotate
+  }, [text, isDeleting, delta, loopNum]); // ✅ Fixed missing toRotate
 
   return (
     <section className="banner" id="home">
