@@ -9,7 +9,6 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
   const toRotate = ["Developer", "Freelancer"];
   const period = 2000;
 
@@ -19,7 +18,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [text, delta]);  // ← added delta also in dependency array
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -34,15 +33,11 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
     }
   }
 
@@ -54,14 +49,11 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  {/* <span className="tagline">Welcome to my Portfolio</span> */}
                   <h1>{`Sameer Bramhecha`}
-                    <br></br>
+                    <br />
                     <span className="txt-rotate" dataPeriod="80" data-rotate='["Developer", "Freelancer"]'>I am a <span className="wrap">{text}</span></span></h1>
                   <p>I have completed my Bachelor's Degree in Computer Engineering from Pune Institute of Computer Technology. I am an open-minded individual who enjoys connecting and interacting with people. Currently, I am working as a Trainee at a US-based company, specializing in the Cloud Adoption domain. I am also exploring DevOps practices and various development frameworks to strengthen my skills. My areas of interest include Data Structures and Algorithms (DSA), Competitive Programming, and Cyber Security. Outside of work, I enjoy playing cricket, watching movies, playing the piano, and listening to music.
-
-</p>
-                  {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
+                  </p>
                 </div>}
             </TrackVisibility>
           </Col>
@@ -76,5 +68,5 @@ export const Banner = () => {
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};
