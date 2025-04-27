@@ -10,6 +10,7 @@ import k8s from "../assets/img/k8s.svg";
 import node from "../assets/img/node.svg";
 import react from "../assets/img/react.svg";
 import dotnet from "../assets/img/dotnet.svg";
+import terraform from "../assets/img/terraform.svg";
 
 export const Skills = () => {
   const responsive = {
@@ -57,6 +58,11 @@ export const Skills = () => {
                 </div>
 
                 <div className="item">
+                  <img src={terraform} alt="Terraform" />
+                  <h5>Terraform</h5>
+                </div>
+
+                <div className="item">
                   <img src={docker} alt="Docker" />
                   <h5>Docker</h5>
                 </div>
@@ -75,6 +81,7 @@ export const Skills = () => {
                   <img src={node} alt="NodeJs" />
                   <h5>Node JS</h5>
                 </div>
+                
 
                 <div className="item">
                   <img src="https://cdn-icons-png.flaticon.com/128/6132/6132222.png" alt="C++" />
